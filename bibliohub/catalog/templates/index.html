@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Home</h1>
+  <p>Welcome to Bibliohub!</p>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+  </ul>
+
+  <p>List of Books</p>
+  <ul>
+    {% for title in titles %}
+      <li>{{ title }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
