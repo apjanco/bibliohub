@@ -40,6 +40,8 @@ class Book(models.Model):
 
     language = models.CharField(max_length=200, null=True)
 
+    tweet_url = models.URLField(max_length=200, null=True)
+
     # author_full_name = models.CharField(max_length=200, help_text='Enter the author\'s name')
 
     def get_absolute_url(self):
